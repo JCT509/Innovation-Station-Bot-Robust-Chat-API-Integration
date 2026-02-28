@@ -1,0 +1,3 @@
+runtime: python311
+entrypoint: gunicorn --bind :$PORT --workers 2 --threads 8 --timeout 25 --keep-alive 5 --max-requests 1000 --max-requests-jitter 50 app:app
+service_account: ai-project-sa-955@care-cockpit-dev.iam.gserviceaccount.com
